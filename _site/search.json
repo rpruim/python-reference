@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "python-reference",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -45,5 +38,33 @@
       "Home",
       "live-html demo"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "python-reference",
+    "section": "",
+    "text": "This tutorial covers the fundamental concepts of Python programming, designed for mid-level undergraduate students with no prior Python experience.\n\n\nQuick Reference:\n\nVariables are created by assigning a value\nBasic data types: int, float, str, bool\n\nAdditional Documentation\nExample:\n\n\n\n\n\n\nExercise 1:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nRemember to use the appropriate data type for each variable. Use an integer for age and a float for height.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nTo print multiple variables, separate them with commas inside the print function.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nage = 20\nheight = 1.75\nprint(age, height)\n\n\n\n\nExercise 2:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse quotes (single or double) to create a string variable.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse an f-string (formatted string) to include variables in the output. Variables go inside curly braces {}.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nfull_name = \"John Doe\"\nis_programmer = True\nprint(f\"My name is {full_name} and it is {is_programmer} that I am a programmer.\")\n\n\n\n\n\n\n\nQuick Reference:\n\nArithmetic: +, -, *, /, // (integer division), % (modulo), ** (exponentiation)\nComparison: ==, !=, &lt;, &gt;, &lt;=, &gt;=\nLogical: and, or, not\n\nAdditional Documentation\nExample:\n\n\n\n\n\n\nExercise 1:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the * operator to multiply the length and width.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nlength = 7\nwidth = 5\narea = length * width\nprint(area)\n\n\n\n\nExercise 2:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nA number is even if it’s divisible by 2 (i.e., number % 2 == 0). A number is positive if it’s greater than 0.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse the and operator to combine the two conditions.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nnumber = 6  # You can change this to any integer\nis_even = number % 2 == 0\nis_positive = number &gt; 0\nprint(f\"The number {number} is both even and positive: {is_even and is_positive}\")\n\n\n\n\n\n\n\nQuick Reference:\n\nif, elif, else for conditional execution\nfor loops for iteration\nwhile loops for conditional iteration\n\nAdditional Documentation\nExample:\n\n\n\n\n\n\nExercise 1:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nA number is prime if it’s only divisible by 1 and itself. Check for divisibility using the modulo operator (%).\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nIf you find any divisor other than 1 and the number itself, the number is not prime.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\ndef is_prime(n):\n    if n &lt; 2:\n        return False\n    for i in range(2, n // 2 + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Test the function\nprint(is_prime(17))\nprint(is_prime(4))\n\n\n\n\nExercise 2:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the modulo operator (%) to check if a number is even.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nIncrement the counter in each iteration, and increment the even_count only when an even number is found.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\ncounter = 0\neven_count = 0\n\nwhile even_count &lt; 5:\n    if counter % 2 == 0:\n        print(counter)\n        even_count += 1\n    counter += 1\n\n\n\n\nThis concludes the basic Python tutorial. Practice these concepts and explore more advanced topics to improve your Python skills!"
+  },
+  {
+    "objectID": "index.html#variables-and-data-types",
+    "href": "index.html#variables-and-data-types",
+    "title": "python-reference",
+    "section": "",
+    "text": "Quick Reference:\n\nVariables are created by assigning a value\nBasic data types: int, float, str, bool\n\nAdditional Documentation\nExample:\n\n\n\n\n\n\nExercise 1:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nRemember to use the appropriate data type for each variable. Use an integer for age and a float for height.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nTo print multiple variables, separate them with commas inside the print function.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nage = 20\nheight = 1.75\nprint(age, height)\n\n\n\n\nExercise 2:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse quotes (single or double) to create a string variable.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse an f-string (formatted string) to include variables in the output. Variables go inside curly braces {}.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nfull_name = \"John Doe\"\nis_programmer = True\nprint(f\"My name is {full_name} and it is {is_programmer} that I am a programmer.\")"
+  },
+  {
+    "objectID": "index.html#basic-operations",
+    "href": "index.html#basic-operations",
+    "title": "python-reference",
+    "section": "",
+    "text": "Quick Reference:\n\nArithmetic: +, -, *, /, // (integer division), % (modulo), ** (exponentiation)\nComparison: ==, !=, &lt;, &gt;, &lt;=, &gt;=\nLogical: and, or, not\n\nAdditional Documentation\nExample:\n\n\n\n\n\n\nExercise 1:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the * operator to multiply the length and width.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nlength = 7\nwidth = 5\narea = length * width\nprint(area)\n\n\n\n\nExercise 2:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nA number is even if it’s divisible by 2 (i.e., number % 2 == 0). A number is positive if it’s greater than 0.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse the and operator to combine the two conditions.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\nnumber = 6  # You can change this to any integer\nis_even = number % 2 == 0\nis_positive = number &gt; 0\nprint(f\"The number {number} is both even and positive: {is_even and is_positive}\")"
+  },
+  {
+    "objectID": "index.html#control-flow",
+    "href": "index.html#control-flow",
+    "title": "python-reference",
+    "section": "",
+    "text": "Quick Reference:\n\nif, elif, else for conditional execution\nfor loops for iteration\nwhile loops for conditional iteration\n\nAdditional Documentation\nExample:\n\n\n\n\n\n\nExercise 1:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nA number is prime if it’s only divisible by 1 and itself. Check for divisibility using the modulo operator (%).\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nIf you find any divisor other than 1 and the number itself, the number is not prime.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\ndef is_prime(n):\n    if n &lt; 2:\n        return False\n    for i in range(2, n // 2 + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Test the function\nprint(is_prime(17))\nprint(is_prime(4))\n\n\n\n\nExercise 2:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the modulo operator (%) to check if a number is even.\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nIncrement the counter in each iteration, and increment the even_count only when an even number is found.\n\n\n\n\n\n\n\n\n\n\n\nFully worked solution:\n\n\n\n\n\ncounter = 0\neven_count = 0\n\nwhile even_count &lt; 5:\n    if counter % 2 == 0:\n        print(counter)\n        even_count += 1\n    counter += 1\n\n\n\n\nThis concludes the basic Python tutorial. Practice these concepts and explore more advanced topics to improve your Python skills!"
   }
 ]
