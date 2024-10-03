@@ -7,10 +7,349 @@ pyodide:
     autorun: false
 ---
 
-This is a Quarto website.
+# Python Basics Tutorial
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This tutorial covers the fundamental concepts of Python programming, designed for mid-level undergraduate students with no prior Python experience.
+
+## 1. Variables and Data Types
+
+Quick Reference:
+
+- Variables are created by assigning a value
+- Basic data types: int, float, str, bool
+
+[Additional Documentation](https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator)
+
+Example:
 
 ```{pyodide}
-1 + 1
+x = 5
+y = 3.14
+name = "Alice"
+is_student = True
+
+print(f"x is {x}")
+print(f"y is {y}")
+print(f"name is {name}")
+print(f"is_student is {is_student}")
 ```
+
+Exercise 1:
+
+```{pyodide}
+#| exercise: ex_1
+# Create a variable called 'age' with your age as an integer
+# Create a variable called 'height' with your height in meters as a float
+# Print both variables
+
+age = ___
+height = ___
+print(___, ___)
+```
+
+::: { .hint exercise="ex_1"}
+::: { .callout-note collapse="false"}
+## Hint 1
+Remember to use the appropriate data type for each variable. Use an integer for age and a float for height.
+:::
+:::
+
+::: { .hint exercise="ex_1"}
+::: { .callout-note collapse="false"}
+## Hint 2
+To print multiple variables, separate them with commas inside the print function.
+:::
+:::
+
+::: { .solution exercise="ex_1" }
+::: { .callout-tip collapse="false"}
+## Fully worked solution:
+```python
+age = 20
+height = 1.75
+print(age, height)
+```
+:::
+:::
+
+Exercise 2:
+
+```{pyodide}
+#| exercise: ex_2
+# Create a variable called 'full_name' with your full name as a string
+# Create a variable called 'is_programmer' and set it to True
+# Print a formatted string using these variables
+
+full_name = ___
+is_programmer = ___
+print(f"___ ___ ___")
+```
+
+::: { .hint exercise="ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 1
+Use quotes (single or double) to create a string variable.
+:::
+:::
+
+::: { .hint exercise="ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 2
+Use an f-string (formatted string) to include variables in the output. Variables go inside curly braces {}.
+:::
+:::
+
+::: { .solution exercise="ex_2" }
+::: { .callout-tip collapse="false"}
+## Fully worked solution:
+```python
+full_name = "John Doe"
+is_programmer = True
+print(f"My name is {full_name} and it is {is_programmer} that I am a programmer.")
+```
+:::
+:::
+
+## 2. Basic Operations
+
+Quick Reference:
+
+- Arithmetic: +, -, *, /, // (integer division), % (modulo), ** (exponentiation)
+- Comparison: ==, !=, <, >, <=, >=
+- Logical: and, or, not
+
+[Additional Documentation](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex)
+
+Example:
+
+```{pyodide}
+a = 10
+b = 3
+
+print(f"Addition: {a + b}")
+print(f"Subtraction: {a - b}")
+print(f"Multiplication: {a * b}")
+print(f"Division: {a / b}")
+print(f"Integer Division: {a // b}")
+print(f"Modulo: {a % b}")
+print(f"Exponentiation: {a ** b}")
+
+print(f"Equal: {a == b}")
+print(f"Not Equal: {a != b}")
+print(f"Greater Than: {a > b}")
+
+print(f"Logical AND: {a > 5 and b < 5}")
+print(f"Logical OR: {a > 15 or b < 5}")
+print(f"Logical NOT: {not (a == b)}")
+```
+
+Exercise 1:
+
+```{pyodide}
+#| exercise: ex_3
+# Calculate the area of a rectangle with length 7 and width 5
+# Store the result in a variable called 'area'
+# Print the area
+
+length = 7
+width = 5
+area = ___
+print(___)
+```
+
+::: { .hint exercise="ex_3"}
+::: { .callout-note collapse="false"}
+## Hint
+Use the `*` operator to multiply the length and width.
+:::
+:::
+
+::: { .solution exercise="ex_3" }
+::: { .callout-tip collapse="false"}
+## Fully worked solution:
+```python
+length = 7
+width = 5
+area = length * width
+print(area)
+```
+:::
+:::
+
+Exercise 2:
+
+```{pyodide}
+#| exercise: ex_4
+# Check if a number is even and positive
+# Create a variable 'number' with any integer value
+# Print whether the number is both even and positive
+
+number = ___
+is_even = ___
+is_positive = ___
+print(f"The number {number} is both even and positive: {___}")
+```
+
+::: { .hint exercise="ex_4"}
+::: { .callout-note collapse="false"}
+## Hint 1
+A number is even if it's divisible by 2 (i.e., number % 2 == 0).
+A number is positive if it's greater than 0.
+:::
+:::
+
+::: { .hint exercise="ex_4"}
+::: { .callout-note collapse="false"}
+## Hint 2
+Use the `and` operator to combine the two conditions.
+:::
+:::
+
+::: { .solution exercise="ex_4" }
+::: { .callout-tip collapse="false"}
+## Fully worked solution:
+```python
+number = 6  # You can change this to any integer
+is_even = number % 2 == 0
+is_positive = number > 0
+print(f"The number {number} is both even and positive: {is_even and is_positive}")
+```
+:::
+:::
+
+## 3. Control Flow
+
+Quick Reference:
+
+- if, elif, else for conditional execution
+- for loops for iteration
+- while loops for conditional iteration
+
+[Additional Documentation](https://docs.python.org/3/tutorial/controlflow.html)
+
+Example:
+
+```{pyodide}
+# Conditional statements
+x = 10
+if x > 0:
+    print("x is positive")
+elif x < 0:
+    print("x is negative")
+else:
+    print("x is zero")
+
+# For loop
+for i in range(5):
+    print(i, end=" ")
+print()  # New line
+
+# While loop
+count = 0
+while count < 3:
+    print(f"Count is {count}")
+    count += 1
+```
+
+Exercise 1:
+
+```{pyodide}
+#| exercise: ex_5
+# Write a function that checks if a number is prime
+# Use a for loop and conditional statements
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, n // 2 + 1):
+        if ___:
+            return ___
+    return ___
+
+# Test the function
+print(is_prime(17))
+print(is_prime(4))
+```
+
+::: { .hint exercise="ex_5"}
+::: { .callout-note collapse="false"}
+## Hint 1
+A number is prime if it's only divisible by 1 and itself. Check for divisibility using the modulo operator (%).
+:::
+:::
+
+::: { .hint exercise="ex_5"}
+::: { .callout-note collapse="false"}
+## Hint 2
+If you find any divisor other than 1 and the number itself, the number is not prime.
+:::
+:::
+
+::: { .solution exercise="ex_5" }
+::: { .callout-tip collapse="false"}
+## Fully worked solution:
+```python
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, n // 2 + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Test the function
+print(is_prime(17))
+print(is_prime(4))
+```
+:::
+:::
+
+Exercise 2:
+
+```{pyodide}
+#| exercise: ex_6
+# Write a while loop that prints the first 5 even numbers
+# Use a counter and an if statement inside the loop
+
+counter = 0
+even_count = 0
+
+while ___:
+    if ___:
+        print(___)
+        ___
+    ___
+
+```
+
+::: { .hint exercise="ex_6"}
+::: { .callout-note collapse="false"}
+## Hint 1
+Use the modulo operator (%) to check if a number is even.
+:::
+:::
+
+::: { .hint exercise="ex_6"}
+::: { .callout-note collapse="false"}
+## Hint 2
+Increment the counter in each iteration, and increment the even_count only when an even number is found.
+:::
+:::
+
+::: { .solution exercise="ex_6" }
+::: { .callout-tip collapse="false"}
+## Fully worked solution:
+```python
+counter = 0
+even_count = 0
+
+while even_count < 5:
+    if counter % 2 == 0:
+        print(counter)
+        even_count += 1
+    counter += 1
+```
+:::
+:::
+
+This concludes the basic Python tutorial. Practice these concepts and explore more advanced topics to improve your Python skills!
